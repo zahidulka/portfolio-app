@@ -1,0 +1,41 @@
+Route::get('/',[TempController::class, 'index']);
+Route::get('/about',[TempController::class, 'about']);
+Route::get('/experience',[TempController::class, 'experience']);
+Route::get('/projects',[TempController::class, 'projects']);
+
+
+app\Http\controller\
+=======================
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class TempController extends Controller
+{
+    public function index(){
+        return view('frontend.home');
+    }
+    public function about(){
+        return view('frontend.about');
+    }
+    public function experience(){
+        return view('frontend.experience');
+    }
+    public function projects(){
+        return view('frontend.projects');
+    }
+}
+
+
+views\frontend\
+==================================
+header.blade.php
+footer.blade.php
+
+home.blade.php
+about.blade.php
+expireance.blade.php
+projects.blade.php
+
